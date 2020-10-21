@@ -54,22 +54,18 @@ checarEmail = () => {
 }
 
 //confirmação final
-validacaoForm = () => {
-    console.log(`Olá seja bem-vindo!
-        Seu nome: ${firstName.value}; 
-        Telefone: ${phoneUser.value}; 
-        E-mail: ${emailUser.value}; 
-        Senhas: ${senha.value} e ${senhaRepeat.value}`)
+
+const submitForm = () => {
     if (firstName.value.length > 1 && phoneUser.value.length > 1 && emailUser.value.length > 1 && senha.value.length > 1 && senhaRepeat.value.length > 1) {
         if (senha.value === senhaRepeat.value) {
             alert(`Olá seja bem-vindo!
-            Seu nome: ${firstName.value}; 
-            Telefone: ${phoneUser.value}; 
-            E-mail: ${emailUser.value}; 
-            Senhas: ${senha.value} e ${senhaRepeat.value}`);
+                    Nome: ${firstName.value}; 
+                    Telefone: ${phoneUser.value}; 
+                    E-mail: ${emailUser.value}; 
+                    Senhas: ${senha.value} e ${senhaRepeat.value}`);
         } else {
-
+            alert("Preencha todos os campos!")
         }
-
     }
-};
+}
+
