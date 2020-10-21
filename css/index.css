@@ -1,8 +1,15 @@
-body,html {
-	background-image:linear-gradient(#347bda,#0058bd);
+
+html, body {
+  background-image:linear-gradient(#347bda,#0058bd);
 	background-repeat: no-repeat;
   height: 100%;
-  font-family: Roboto;
+}
+
+body {
+  min-width: 100%;
+  font-family: Roboto, arial, helvetica, sans-serif;
+  font-size: 18px;
+  padding: 0;
 }
 
 input, button{
@@ -139,12 +146,20 @@ a:hover {
   cursor: pointer;
 }
 
+@media (max-width: 1024px){
+  .form{
+    min-width: 550px;
+  }
+}
 
 
-@media (max-width: 800px){
+@media (max-width: 768px){
+  body{
+    min-width: 800px;
+  }
   .form{
     margin-left: 0;
-    min-width: 530px;
+    min-width: 690px;
   }
   .line{
     text-align: center;
@@ -159,19 +174,24 @@ a:hover {
     }
 
     .card-body{
-      width: 100%;
+      width: 80%;
       height: 560px;
+      border-radius: none;
     }
     
 }
 
-@media (max-width: 680px){
+@media (max-width: 425px){
+  body, html{
+    min-width: 800px;
+  }
   .line{
     width: 50%;
   }
   .card-body{
     min-width: 490px;
     height: 800px;
+    border-radius: 0;
   }
   .links{
     align-items: flex-start;
@@ -179,10 +199,20 @@ a:hover {
   }
   .form{
     margin-left: 0;
-    min-width: 500px;
+    min-width: 425px;
   }
   .form div {
     min-width: 150px;
     padding-left: 10px;
   }
+}
+
+@media (max-width: 320px){
+.card-body{
+    min-width: 300px;
+  }
+  .form{
+    margin-left: 0;
+    min-width: 325px;
+}
 }

@@ -63,8 +63,8 @@ const submitForm = () => {
                     Telefone: ${phoneUser.value}; 
                     E-mail: ${emailUser.value}; 
                     Senhas: ${senha.value} e ${senhaRepeat.value}`);
-        } else {
-            alert("Preencha todos os campos!")
+        } else if (senha.value !== senhaRepeat.value) {
+            alert("Preencha todos os campos corretamente!")
         }
     }
 }
